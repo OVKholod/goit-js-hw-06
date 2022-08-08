@@ -16,10 +16,8 @@ const images = [
 const list = document.querySelector(".gallery");
 
 images.forEach((image) => {
-  const itemEl = document.createElement("li");
-  const imgEl = document.createElement("img");
-  imgEl.setAttribute("src", image.url);
-  imgEl.setAttribute("alt", image.alt);
-  itemEl.insertAdjacentElement("beforebegin", imgEl);
-  list.insertAdjacentHTML("beforebegin", itemEl);
+  list.insertAdjacentHTML(
+    "beforeend",
+    `<li><img src=${image.url} alt=${image.alt} /> </li>`
+  );
 });
