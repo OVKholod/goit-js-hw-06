@@ -3,6 +3,6 @@ let outputEl = document.querySelector("#name-output");
 
 let textValue = "Anonymous";
 
-inputEl.addEventListener("keypress", (event) => {
-  outputEl.textContent += event.key;
+inputEl.addEventListener("input", (event) => {
+  outputEl.textContent = event.target.value;
 });
